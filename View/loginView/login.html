@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="../../css/loginCssFolder/common.css">
+<link rel="stylesheet" href="../../css/loginCssFolder/login.css">
+<link rel="stylesheet" href="../../css/loginCssFolder/font-awesome-4.7.0/css/font-awesome.css">
+<script type="text/javascript" src="..\..\js\loginJsFolder\loginJs.js"></script>
+</head>
+<body>
+	<!-- 背景图片 -->
+	<img width="100%" height="100%" style="z-index:-100;position:fixed;left:0;top:0" src="..\..\img\loginImg\002.png">
+	<div id="login-box">
+		<h1>Login</h1>
+		<form action="../../servlet/loginServlet" method="post">
+		<div class="form">
+			<div class="item">
+				<i class="fa fa-user-circle-o" aria-hidden="true"></i> 
+				<input type="text" placeholder="Username" name="uname" id="userName">
+			</div>
+			<div class="item">
+				<i class="fa fa-key" aria-hidden="true"></i> 
+				<input type="password" placeholder="Password" name="upassword" id="userPwd">
+			</div>
+		</div>
+		<button onclick="return checkLogin()">Login</button>
+		</form>
+	</div>
+</body>
+</html>

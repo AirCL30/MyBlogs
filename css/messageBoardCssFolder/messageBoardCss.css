@@ -1,0 +1,28 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.mainDiv h1{
+	text-align: center;
+	margin-top: 15px;
+}
+.formDiv{
+	text-align: center;
+	margin-top: 15px;
+}
+.formDiv textarea {
+	resize: none;
+	border-radius: 5px;
+	border: none;
+	border: 1px solid black;
+}
+.formDiv button{
+	height:36px;
+	width:200px;
+	background:#00509d;
+	background:-webkit-gradient(linear,left top,left bottom,from(#0079bc),to(#00509d));
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	border:none;/* 去掉边框 */
+	color:white;
+	border-radius:4px;
+}

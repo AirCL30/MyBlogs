@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>writeBlogs.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" type="text/css"
+	href="../../css/writeBlogsCssFolder/writeBlogs.css">
+
+<link rel="stylesheet" type="text/css"
+	href="../../plugin/simditor-2.3.28/site/assets/styles/simditor.css" />
+
+<script type="text/javascript"
+	src="../../plugin/simditor-2.3.28/site/assets/scripts/jquery.min.js"></script>
+<script type="text/javascript"
+	src="../../plugin/simditor-2.3.28/site/assets/scripts/module.js"></script>
+<script type="text/javascript"
+	src="../../plugin/simditor-2.3.28/site/assets/scripts/hotkeys.js"></script>
+<!-- 不需要上传文件
+	<script type="text/javascript" src="../plugin/simditor-2.3.28/site/assets/scripts/uploader.js"></script>
+	 -->
+<script type="text/javascript"
+	src="../../plugin/simditor-2.3.28/site/assets/scripts/simditor.js"></script>
+
+
+</head>
+
+<body ondragstart="return false">
+	<!-- 背景图片 -->
+	<img width="100%" height="100%"
+		style="z-index:-100;position:fixed;left:0;top:0"
+		src="..\..\img\writeBlogsImg\001.jpg">
+	<div class="main">
+		<div class="tittle">
+			<h1>写 篇 东 西 再 走 吧 ~</h1>
+		</div>
+		<div class="tittle_and_kind_div">
+			<div class="tittle_div">
+				<span>标题：</span> <input name="blogTittle" id="blogTittleId" />
+			</div>
+			<div class="kind_div">
+				<span>类别：</span> <select name="blogKind" id="blogKindId">
+					<option selected="selected" value="Java">&nbsp;Java&nbsp;</option>
+					<option value="Java Web">&nbsp;Java Web&nbsp;</option>
+					<option value="Android">&nbsp;Android&nbsp;</option>
+					<option value="Linux">&nbsp;Linux&nbsp;</option>
+					<option value="Data Structure">&nbsp;Data Structure&nbsp;</option>
+					<option value="Oracle">&nbsp;Oracle&nbsp;</option>
+				</select>
+			</div>
+		</div>
+		<div class="editor_div">
+			<textarea id="editor" placeholder="Balabala"></textarea>
+		</div>
+		<div class="button_div">
+			<button onclick="sendRequestByPost()">发表</button>
+		</div>
+	</div>
+</body>
+<script>
+	var editor = new Simditor({
+		textarea : $('#editor')
+	});
+</script>
+<script type="text/javascript">
+	//ajax请求servlet
+	function sendRequestByPost() {
+		if (!editor.getValue() || document.getElementById("blogTittleId").value == "") {
+			alert("先输入内容，忘了？");
+			return false;
+		}
+		//定义异步请求对象
+		var xmlReq;
+		
+		//检测浏览器是否直接支持ajax
+		if (window.XMLHttpRequest) {//直接支持ajax
+			xmlReq = new XMLHttpRequest();
+		} else {//不直接支持ajax
+			xmlReq = new ActiveObject('Microsoft.XMLHTTP');
+		}
+		//设置回调函数
+		xmlReq.onreadystatechange = function() {
+			if (xmlReq.readyState == 4 && xmlReq.status == 200) {
+				//获取服务器的响应值
+				var result = xmlReq.responseText;
+				//后续操作
+				if(result == "success"){
+					alert("发表成功");
+					window.location.href = "admin.jsp";
+				}else {
+					alert("发表失败");
+				}
+			}
+		};
+		//创建异步Post请求
+		var url = "../../servlet/insertBlogServlet";
+		xmlReq.open("POST", url, true);
+		xmlReq.setRequestHeader("Content-Type","application/x-www-form-urlencoded");	
+		//发送请求
+		var tittle = document.getElementById("blogTittleId").value;
+		var kind = document.getElementById("blogKindId").value;
+		var content = editor.getValue();
+		var data = "blogTittle=" + tittle + "&blogKind=" + kind + "&blogContent=" + content;
+		xmlReq.send(data);
+	}
+</script>
+</html>
