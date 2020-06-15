@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.allFather{
+	height: 100%;
+	background-color: white;
+	margin: 3px 15% 0 15%;
+	filter:alpha(Opacity=90);-moz-opacity:0.9;opacity: 0.9;
+}
+.tittle{
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.tongji{
+	text-align: center;
+	background-color: #999aaa;
+	border-radius: 5px;    /*±ß¿òÎªÔ²ÐÎ*/
+	margin-left: 10%;
+	width: 80%;
+	height: 28px;
+	padding-top: 5px;
+}
+.blog_time,.blogs_read,.blogs_likes{
+	display: inline-block;
+	width: 30%;
+}
+.mainContent{
+	margin-top: 10px;
+	margin-left: 5%;
+}

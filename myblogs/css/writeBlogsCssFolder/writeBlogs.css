@@ -1,0 +1,62 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.main{
+	padding:30px 15%;
+}
+.tittle{
+	text-align: center;
+}
+.tittle_and_kind_div{
+	margin-top: 50px;
+	width: 100%;
+}
+.tittle_and_kind_div span{
+	font-size: 170%;
+}
+.tittle_div{
+	display: inline-block;
+	width: 48%;
+	text-align: center;
+}
+.tittle_div input{
+	height:33.8px;
+	font-size:100%;
+	border-radius:3px;
+	border: 1.2px solid black;
+	background:transparent;
+	outline:0;
+	box-shadow:none;
+	border-collapse:collapse;
+}
+.kind_div{
+	display: inline-block;
+	width: 48%;
+	text-align: center;
+}
+.kind_div select{
+	height:36px;
+	width: 30%;
+	display:inline;
+	vertical-align:center;
+	border-radius:3px;
+	border: 1.2px solid #DBDBDB;
+}
+.editor_div{
+	margin-top: 10px;
+}
+.button_div{
+	margin-top: 10px;
+	text-align: right;
+}
+.button_div button{
+	height:36px;
+	width:80px;
+	background:#00509d;
+	background:-webkit-gradient(linear,left top,left bottom,from(#0079bc),to(#00509d));
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	border:none;/* 去掉边框 */
+	color:white;
+	border-radius:4px;
+}

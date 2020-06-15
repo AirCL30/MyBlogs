@@ -1,0 +1,31 @@
+.managBlogs{
+	text-align: center;
+	margin: 10px 10% 0 10%;
+}
+.managBlogs a{
+	text-decoration: none;
+}
+.b_blogs{
+	width: 100%;
+	height: 130px;
+	color: black;
+	border-radius: 10px;    /*±ß¿òÎªÔ²ÐÎ*/
+	margin-top: 10px;
+	border: 1px solid black;
+}
+.b_blogs_tittle{
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	font-size: 200%;
+	padding-top: 10px;
+}
+.b_blogs_tongji{
+	text-align: center;
+	width: 100%;
+	height: 30px;
+}
+.blog_time,.blogs_read,.blogs_likes{
+	width: 30%;
+	display: inline-block;
+}

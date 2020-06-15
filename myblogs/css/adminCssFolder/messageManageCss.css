@@ -1,0 +1,23 @@
+.managBlogs{
+	text-align: center;
+	margin: 10px 10% 0 10%;
+}
+.managBlogs a{
+	text-decoration: none;
+}
+.b_blogs{
+	width: 100%;
+	height: 130px;
+	color: black;
+	border-radius: 10px;    /*±ß¿òÎªÔ²ÐÎ*/
+	margin-top: 10px;
+	border: 1px solid black;
+}
+.mcontent{
+	width: 100%;
+	height: 70px;
+	text-align: center;
+	font-size: 100%;
+	padding-top: 10px;
+	color: violet;
+}

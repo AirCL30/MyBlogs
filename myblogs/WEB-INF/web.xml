@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name></display-name>
+	<welcome-file-list>
+		<welcome-file>blogsMain.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- 拦截器开始 -->
+
+	<!-- 页面访问拦截器，拦截企图使用url打开管理员界面的请求 -->
+	<filter> 
+		<filter-name>PageAccessFilter</filter-name> 
+		<filter-class>cc.filter.PageAccessFilter</filter-class> 
+	</filter> 
+	
+	<filter-mapping> 
+		<filter-name>PageAccessFilter</filter-name> 
+		<url-pattern>/View/adminView/admin.jsp</url-pattern> 
+	</filter-mapping> 
+	<filter-mapping> 
+		<filter-name>PageAccessFilter</filter-name> 
+		<url-pattern>/View/adminView/writeBlogs.html</url-pattern> 
+	</filter-mapping> 
+	<filter-mapping> 
+		<filter-name>PageAccessFilter</filter-name> 
+		<url-pattern>/View/adminView/blogsManage.jsp</url-pattern> 
+	</filter-mapping> 
+	<filter-mapping> 
+		<filter-name>PageAccessFilter</filter-name> 
+		<url-pattern>/View/adminView/messagesManage.jsp</url-pattern> 
+	</filter-mapping> 
+	<filter-mapping> 
+		<filter-name>PageAccessFilter</filter-name> 
+		<url-pattern>/View/adminView/updateBlog.jsp</url-pattern> 
+	</filter-mapping> 
+
+	<!-- 拦截器结束 -->
+
+	<servlet>
+		<servlet-name>loginServlet</servlet-name>
+		<servlet-class>cc.servlet.loginServlet</servlet-class>
+	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>insertBlogServlet</servlet-name>
+    <servlet-class>cc.servlet.insertBlogServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>updateLikesServlet</servlet-name>
+    <servlet-class>cc.servlet.updateLikesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>deleteBlogServlet</servlet-name>
+    <servlet-class>cc.servlet.deleteBlogServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetPartialBlogsServlet</servlet-name>
+    <servlet-class>cc.servlet.GetPartialBlogsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertMessageServlet</servlet-name>
+    <servlet-class>cc.servlet.InsertMessageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteMessageServlet</servlet-name>
+    <servlet-class>cc.servlet.DeleteMessageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MoreBlogsServlet</servlet-name>
+    <servlet-class>cc.servlet.MoreBlogsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateBlogServlet</servlet-name>
+    <servlet-class>cc.servlet.UpdateBlogServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>loginServlet</servlet-name>
+		<url-pattern>/servlet/loginServlet</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>insertBlogServlet</servlet-name>
+    <url-pattern>/servlet/insertBlogServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>updateLikesServlet</servlet-name>
+    <url-pattern>/servlet/updateLikesServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>deleteBlogServlet</servlet-name>
+    <url-pattern>/servlet/deleteBlogServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetPartialBlogsServlet</servlet-name>
+    <url-pattern>/servlet/GetPartialBlogsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InsertMessageServlet</servlet-name>
+    <url-pattern>/servlet/InsertMessageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteMessageServlet</servlet-name>
+    <url-pattern>/servlet/DeleteMessageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MoreBlogsServlet</servlet-name>
+    <url-pattern>/servlet/MoreBlogsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateBlogServlet</servlet-name>
+    <url-pattern>/servlet/UpdateBlogServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
