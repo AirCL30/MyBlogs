@@ -19,7 +19,11 @@
 <meta http-equiv="description" content="This is my page">
 
 <link rel="stylesheet" type="text/css" href="css\blogsMainCssFolder\blogsMainCss.css">
+<link rel="stylesheet" type="text/css" href="css\allPageCssFolder\mouseCss.css">
 <script type="text/javascript" src="js\blogsMainJsFolder\blogsMainJs.js"></script>
+<script type="text/javascript" src="js\allPageJsFolder\jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js\allPageJsFolder\jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js\allPageJsFolder\mouseClick.js"></script>
 </head>
 
 <body onload="showTime(),divToBottom(),autoAdjustDiv(),moneyShow()" ondragstart="return false" onresize="autoAdjustDiv()">
@@ -49,7 +53,7 @@
 					<li class="a_a_ul_li"><a href="#">博主项目</a></li>
 					<li class="a_a_ul_li"><a href="#">日记</a></li>
 					<li class="a_a_ul_li"><a href="#">神秘空间</a></li>
-					<li class="a_a_ul_li"><a href="View/loginView/login.html">登录</a></li>
+					<li class="a_a_ul_li"><a href="View/loginView/login.html" target="_blank">登录</a></li>
 					<li class="a_a_ul_li" id="time_li"><span id="time">时间</span></li>
 				</ul>
 			</div>
@@ -65,7 +69,8 @@
     				<div class="b_left_top_img_div">
     				</div>
     				<div class="b_left_top_touxiang_div">
-    					<a href="View/adminView/admin.jsp" target="_blank"><img alt="头像" src="img\blogsMainImg\touxiang.png" width="90px" height="90px"></a><br/><br/>
+    					<a href="View/adminView/admin.jsp" target="_blank">
+    					<img alt="头像" src="img\blogsMainImg\touxiang.png" width="90px" height="90px"></a><br/><br/>
     					<span id="ice_cream">冰淇淋</span>
     				</div>
     				<div class="b_left_top_tongji_div">

@@ -32,6 +32,10 @@
 		<filter-name>PageAccessFilter</filter-name> 
 		<url-pattern>/View/adminView/messagesManage.jsp</url-pattern> 
 	</filter-mapping> 
+	<filter-mapping> 
+		<filter-name>PageAccessFilter</filter-name> 
+		<url-pattern>/View/adminView/updateBlog.jsp</url-pattern> 
+	</filter-mapping> 
 
 	<!-- 拦截器结束 -->
 
@@ -81,6 +85,13 @@
     <servlet-name>MoreBlogsServlet</servlet-name>
     <servlet-class>cc.servlet.MoreBlogsServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateBlogServlet</servlet-name>
+    <servlet-class>cc.servlet.UpdateBlogServlet</servlet-class>
+  </servlet>
+
 
 
 
@@ -120,5 +131,9 @@
   <servlet-mapping>
     <servlet-name>MoreBlogsServlet</servlet-name>
     <url-pattern>/servlet/MoreBlogsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateBlogServlet</servlet-name>
+    <url-pattern>/servlet/UpdateBlogServlet</url-pattern>
   </servlet-mapping>
 </web-app>

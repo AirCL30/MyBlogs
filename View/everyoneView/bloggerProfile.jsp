@@ -34,6 +34,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			font-size: 120%;
 		}
 	</style>
+	<link rel="stylesheet" type="text/css" href="css\allPageCssFolder\mouseCss.css">
+	<script type="text/javascript" src="js\loginJsFolder\loginJs.js"></script>
+	<script type="text/javascript" src="js\allPageJsFolder\jquery-1.7.2.js"></script>
+	<script type="text/javascript" src="js\allPageJsFolder\jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js\allPageJsFolder\mouseClick.js"></script>
   </head>
   
   <body ondragstart="return false">
